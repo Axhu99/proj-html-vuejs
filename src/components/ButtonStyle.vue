@@ -17,6 +17,7 @@ export default {
         },
         iconRight: {
             type: Boolean,
+            default: false,
         }
     }
 

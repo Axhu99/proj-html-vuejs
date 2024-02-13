@@ -1,0 +1,147 @@
+<script>
+export default {
+    name: 'CarouselSection',
+    data: () => ({
+        learners: [
+            {
+                id: 1,
+                name: "Florence Themes",
+                job: "Multimedia Admin",
+                title: "It's a choice of quality for people with special needs",
+                paragraph: "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
+                img: "testimonial-avata-03.jpg",
+            },
+            {
+                id: 2,
+                name: "Mina Hollace",
+                job: "Freelancer",
+                title: "High level of efficiency and scientific teaching methods",
+                paragraph: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+                img: "testimonial-avata-02.jpg",
+            },
+            {
+                id: 3,
+                name: "Madley Pondor",
+                job: "IT Specialist",
+                title: "Professional team of specialists and passionate mentors at reach",
+                paragraph: "I need to get a certification for English proficiency and MaxCoach is my best choice.Their tutors are smart and professional when dealing with students.",
+                img: "testimonial-avata-04.jpg",
+            },
+            {
+                id: 4,
+                name: "Luvic Dubble",
+                job: "Private Tutor",
+                title: "The MaxCoach team works really hard to ensure high quality",
+                paragraph: "I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.",
+                img: "testimonial-avata-01.jpg",
+            },
+        ],
+        activeIndex: 0,
+        prevIndex: null,
+        nextIndex: 1,
+    }),
+    methods: {
+        goToSlide(index) {
+            let nextIndex = (this.activeIndex + 1) % this.learners.length;
+
+            if (index === this.activeIndex) return;
+
+            if (index === this.learners.length - 1) {
+                this.prevIndex = this.activeIndex;
+                this.activeIndex = 0;
+                this.nextIndex = 1;
+            } else {
+                this.prevIndex = this.activeIndex;
+                this.activeIndex = nextIndex;
+                this.nextIndex = (nextIndex + 1) % this.learners.length;
+            }
+        }
+    }
+
+};
+</script>
+
+<template>
+    <div class="text-center mt-5 mb-5">
+        <p>GREAT WORDS ABOUT MAXCOACH</p>
+        <h3>Our <span>top Learners'</span>verbatim</h3>
+        <div class="mt-5 card-container">
+            <div class="carousel d-flex">
+                <div class="card" v-for="(learner, index) in learners" :key="learner.id" :class="{
+                    'card': true, 'active': index === activeIndex, 'prev': index === prevIndex, 'next': index === nextIndex,
+                    'd-none': index === 0 && activeIndex === 2
+                }">
+                    <h4> {{ learner.title }}
+                    </h4>
+                    <p class="mt-4">{{ learner.paragraph }}</p>
+                    <div class="d-flex">
+                        <img :src="`../../public/img/${learner.img}`" alt="" class="rounded-circle mt-4">
+                        <div class="mt-4">
+                            <p>{{ learner.name }}</p>
+                            <span>/ {{ learner.job }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span v-for="(learner, index) in learners" :key="learner.id" @click="goToSlide(index)"
+                :class="{ 'dot': true, 'active': index === activeIndex }"></span>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+.card {
+    flex: 0 0 33.33%;
+    padding: 41px 50px 36px;
+    transition: opacity 0.5s ease;
+}
+
+span {
+    color: green;
+}
+
+img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.carousel {
+    gap: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.card.active {
+    opacity: 1;
+    position: relative;
+    left: 0;
+}
+
+.card.prev,
+.card.next {
+    opacity: 0.5;
+}
+
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #333;
+}
+</style>
