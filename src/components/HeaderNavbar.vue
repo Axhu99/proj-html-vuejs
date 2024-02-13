@@ -89,9 +89,9 @@ export default {
                         </ul>
                     </li>
 
-                    <!--* ICON -->
-                    <span>
-                        <font-awesome-icon icon="user" />
+                    <!--! ICON  DA RIVEDERE -->
+                    <span class="mt-2">
+                        <font-awesome-icon :icon="['far', 'circle-user']" />
                     </span>
 
                     <!--* SEARCHBAR -->
@@ -102,7 +102,7 @@ export default {
 
                         <!--* ICON -->
                         <span class="input-group-text">
-                            <i class="fas fa-search"></i>
+                            <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
                         </span>
                     </div>
                 </ul>
@@ -116,10 +116,16 @@ export default {
     width: 158px;
     display: block;
     margin-right: 150px;
+
 }
 
 nav {
+    background-color: #fff;
     box-shadow: 5px 5px 5px rgba(219, 219, 219, 0.445);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav-item a {

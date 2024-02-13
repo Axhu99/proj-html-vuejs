@@ -14,14 +14,20 @@ export default {
         icon: {
             type: Array,
             required: true,
+        },
+        iconRight: {
+            type: Boolean,
         }
     }
+
 };
 </script>
 
 <template>
     <div>
-        <button type="button" class="btn"> <font-awesome-icon :icon="icon" /> {{ buttonText }}</button>
+        <button type="button" class="btn d-flex justify-content-center"> <span
+                :class="{ 'iconP': iconRight }"><font-awesome-icon :icon="icon" /></span>
+            {{ buttonText }}</button>
     </div>
 </template>
 
@@ -32,6 +38,11 @@ export default {
     padding: 13px 12px;
     color: white;
     font-weight: bold;
+    gap: 10px;
+}
+
+.iconP {
+    order: 1;
 }
 </style>
 

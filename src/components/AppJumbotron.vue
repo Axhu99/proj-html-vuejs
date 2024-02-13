@@ -1,6 +1,8 @@
 <script>
+import ButtonStyle from './ButtonStyle.vue'
 export default {
-    name: 'AppJumbotron'
+    name: 'AppJumbotron',
+    components: { ButtonStyle }
 }
 </script>
 
@@ -13,7 +15,7 @@ export default {
                 <div class="jumbotronText">
                     <h1 class="titleJT">Distant learning for further expansion</h1>
                     <p>Learning is a life-long jourbey that in fact we never find</p>
-                    <p> ---- buttone ----</p>
+                    <ButtonStyle :icon="['fas', 'download']" buttonText="Download free guide" />
                     <p>Have questions? <span class="link">Get Free Sample</span></p>
                 </div>
             </div>
