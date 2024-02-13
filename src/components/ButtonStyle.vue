@@ -44,8 +44,8 @@ export default {
 .iconP {
     order: 1;
 }
+
+.btn:hover {
+    background-color: #696969;
+}
 </style>
-
-
-<!-- <font-awesome-icon :icon="['fas', 'download']" /> -->
-<!--<font-awesome-icon :icon="['fas', 'arrow-right']" /> -->
