@@ -9,6 +9,6 @@ export default {
 
 <template>
     <HeaderNavbar />
-    <AppJumbotron immagine non cerchio hai il sopratitolo hai un bottone />
+    <AppJumbotron />
 </template>
 
