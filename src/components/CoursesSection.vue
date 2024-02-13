@@ -1,6 +1,8 @@
 <script>
+import ButtonStyle from './ButtonStyle.vue';
 export default {
   name: "CoursesSection",
+  components: { ButtonStyle },
   data: () => ({
     courses: [
       {
@@ -71,12 +73,16 @@ export default {
               <h2 class="clr-grn m-0">{{ course.price }}</h2>
               <h4 class="m-0">{{ course.name }}</h4>
               <div>
-                <span class="me-3"><i class="fa-regular fa-file-lines fa-sm me-1"></i>{{ course.lesson }} Lessons</span>
-                <span><i class="fa-regular fa-user fa-sm me-1"></i>{{ course.students }} Students</span>
+                <span class="me-3"><font-awesome-icon :icon="['far', 'file-lines']" /> {{ course.lesson }} Lessons</span>
+                <span><font-awesome-icon :icon="['far', 'user']" /> {{ course.students }} Students</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <!-- !Riguardare la posizione dell'icona  -->
+      <div class="d-flex justify-content-center mt-5">
+        <ButtonStyle buttonText='View all courses' :icon="['fas', 'arrow-right']" iconRight="true" />
       </div>
     </div>
   </section>
