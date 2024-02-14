@@ -41,8 +41,8 @@ export default {
           <img :src="`../../public/img/${tutoring.imgpath}`" alt="" />
           <h3 class="clr-vlt mt-3">{{ tutoring.title }}</h3>
           <p class="mt-3">{{ tutoring.text }}</p>
-          <a :href="tutoring.link" class="link-hover text-decoration-none clr-gry">{{ tutoring.link }} <font-awesome-icon
-              :icon="['fas', 'arrow-right']" /></a>
+          <a :href="tutoring.link" class="link-hover text-decoration-none clr-gry">{{ tutoring.link }}
+            <font-awesome-icon :icon="['fas', 'arrow-right']" /></a>
         </div>
       </div>
     </div>
@@ -59,10 +59,33 @@ export default {
   flex-basis: calc(100% / 3);
 }
 
-.col-3:hover .link-hover {
+/* .col-3:hover .link-hover {
   color: #1FAC95;
 
+} */
+
+/* ------------------------------------ */
+.col-3:hover .link-hover {
+  color: #1FAC95;
+  position: relative;
 }
+
+.link-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: grey;
+  transition: width 0.5s ease-in-out;
+}
+
+.col-3:hover .link-hover::before {
+  width: 100%;
+}
+
+/* ------------------------------------ */
 
 .clr-vlt {
   color: #3F3A64;
