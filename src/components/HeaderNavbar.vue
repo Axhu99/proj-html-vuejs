@@ -317,6 +317,11 @@ ul {
 
 }
 
+.li-link {
+    transition: all 0.5s ease;
+
+}
+
 .li-bord:hover .li-link {
     color: #20AD96;
     text-decoration: underline;
@@ -348,6 +353,7 @@ a {
     position: absolute;
     top: 100%;
     border-bottom: 3px solid #20AD96;
+
 
     flex-direction: column;
     gap: 15px;
