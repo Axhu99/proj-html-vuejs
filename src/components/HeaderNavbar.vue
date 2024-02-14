@@ -6,240 +6,255 @@ export default {
 
 <template>
     <nav class="navbar navbar-expand-lg p-0">
-        <div class="container">
+        <div class="container justify-content-between">
 
             <!--* LOGO -->
             <a class="navbar-brand" href="#">
                 <img src="../../public/img/dark-logo.png" alt="Logo" id="nav-logo">
             </a>
 
-            <!--* NAV LINKS -->
-
-            <div id="links">
-                <ul class="links-ul">
-                    <li class="li-bord">
-                        <a href="#clienti">Home</a>
-                        <div class="dropdown p-0" id="home-dropdown">
-                            <div class="container py-4">
-                                <div class="row">
-                                    <div class="col-3">
-                                        <ul class="flex-column gap-3 p-0">
-                                            <li>
-                                                <a href="#">MaxCoach Education</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Course Portal</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Distant Learning</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Multimedia Pedagogy</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Modern Schooling</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Remote training</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Health Coaching</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Gym Coaching</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Business</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Artist</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-3">
-                                        <ul class="flex-column gap-3">
-                                            <li>
-                                                <a href="#">Kitchen Coach</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Motivation</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Dancing</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Guitar</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Yoga</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Photography</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Personal Finance</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Sales Coaching</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Mental Theraphy</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-6">
-                                        <img src="../../public/img/homepages-mega-menu-image-alt.jpg" alt="menu"
-                                            class="img-fluid">
+            <div class="d-flex align-items-center">
+                <!--* NAV LINKS -->
+                <div id="links">
+                    <ul class="links-ul gap-4">
+                        <li class="li-bord">
+                            <a href="#clienti" class="li-link d-flex align-items-center gap-2">Home <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <div class="dropdown p-0" id="home-dropdown">
+                                <div class="container py-4">
+                                    <div class="row" id="home-ul">
+                                        <div class="col-3">
+                                            <ul class="flex-column gap-3 p-0 home-ul">
+                                                <li>
+                                                    <a href="#">MaxCoach Education <span
+                                                            class="badge text-bg-danger ms-2">HOT</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Course Portal</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Distant Learning <span
+                                                            class="badge text-bg-danger ms-2">HOT</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Multimedia Pedagogy</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Modern Schooling</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Remote training</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Health Coaching</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Gym Coaching</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Business</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Artist</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-3">
+                                            <ul class="flex-column gap-3 home-ul">
+                                                <li>
+                                                    <a href="#">Kitchen Coach</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Motivation</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Dancing</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Guitar</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Yoga</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Photography</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Personal Finance</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Sales Coaching <span
+                                                            class="badge text-bg-info text-light ms-2">NEW</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Mental Theraphy <span
+                                                            class="badge text-bg-info text-light ms-2">NEW</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <img src="../../public/img/homepages-mega-menu-image-alt.jpg" alt="menu"
+                                                class="img-fluid">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li class="li-bord">
-                        <a href="#funzioni">Pages</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Star Here</a>
-                            </li>
-                            <li>
-                                <a href="#">Success Story</a>
-                            </li>
-                            <li>
-                                <a href="#">About me</a>
-                            </li>
-                            <li>
-                                <a href="#">About us 01</a>
-                            </li>
-                            <li>
-                                <a href="#">About us 02</a>
-                            </li>
-                            <li>
-                                <a href="#">About us 03</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact me</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact us</a>
-                            </li>
-                            <li>
-                                <a href="#">Purchase Guide</a>
-                            </li>
-                            <li>
-                                <a href="#">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="#">Terms of Service</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="li-bord">
-                        <a href="#piani">Courses</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Courses Grid 01</a>
-                            </li>
-                            <li>
-                                <a href="#">Courses Grid 02</a>
-                            </li>
-                            <li>
-                                <a href="#">Courses Grid 03</a>
-                            </li>
-                            <li>
-                                <a href="#">Membership Levels</a>
-                            </li>
-                            <li>
-                                <a href="#">Became a Teacher</a>
-                            </li>
-                            <li>
-                                <a href="#">Profile</a>
-                            </li>
-                            <li>
-                                <a href="#">Checkout</a>
-                            </li>
-                            <li class="li-bord-s">
-                                <a href="#">Single Layout</a>
-                                <ul class="dropdown-s">
-                                    <li>
-                                        <a href="#" class="color-grey">Events</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="color-grey">Zoom Meetings</a>
-                                    </li>
+                        </li>
+                        <li class="li-bord">
+                            <a href="#funzioni" class="li-link d-flex align-items-center gap-2">Pages <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Star Here</a>
+                                </li>
+                                <li>
+                                    <a href="#">Success Story</a>
+                                </li>
+                                <li>
+                                    <a href="#">About me</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us 01</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us 02</a>
+                                </li>
+                                <li>
+                                    <a href="#">About us 03</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact me</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Purchase Guide</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms of Service</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li-bord">
+                            <a href="#piani" class="li-link d-flex align-items-center gap-2">Courses <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Courses Grid 01</a>
+                                </li>
+                                <li>
+                                    <a href="#">Courses Grid 02</a>
+                                </li>
+                                <li>
+                                    <a href="#">Courses Grid 03</a>
+                                </li>
+                                <li>
+                                    <a href="#">Membership Levels</a>
+                                </li>
+                                <li>
+                                    <a href="#">Became a Teacher</a>
+                                </li>
+                                <li>
+                                    <a href="#">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#">Checkout</a>
+                                </li>
+                                <li class="li-bord-s">
+                                    <a href="#" class="li-link d-flex align-items-center gap-2">Single Layout
+                                        <font-awesome-icon :icon="['fas', 'angle-right']" class="fa-2xs" /></a>
+                                    <ul class="dropdown-s">
+                                        <li>
+                                            <a href="#" class="color-grey">Events</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="color-grey">Zoom Meetings</a>
+                                        </li>
 
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="li-bord">
-                        <a href="#piani">Features</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Events</a>
-                            </li>
-                            <li>
-                                <a href="#">Zoom Meetings</a>
-                            </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li-bord">
+                            <a href="#piani" class="li-link d-flex align-items-center gap-2">Features <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Events</a>
+                                </li>
+                                <li>
+                                    <a href="#">Zoom Meetings</a>
+                                </li>
 
-                        </ul>
-                    </li>
-                    <li class="li-bord">
-                        <a href="#piani">Blog</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Blog Grid</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog Masonry</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog Classic</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog List</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="li-bord">
-                        <a href="#piani">Shop</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Shop Left Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Right Sidebar</a>
-                            </li>
-                            <li>
-                                <a href="#">Cart</a>
-                            </li>
-                            <li>
-                                <a href="#">Wishlist</a>
-                            </li>
-                            <li>
-                                <a href="#">Single Product</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <!--! ICON -->
-                        <span class="me-3">
-                            <font-awesome-icon :icon="['far', 'circle-user']" />
-                        </span>
-                    </li>
-                </ul>
+                            </ul>
+                        </li>
+                        <li class="li-bord">
+                            <a href="#piani" class="li-link d-flex align-items-center gap-2">Blog <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Blog Grid</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog Masonry</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog Classic</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog List</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li-bord">
+                            <a href="#piani" class="li-link d-flex align-items-center gap-2">Shop <font-awesome-icon
+                                    :icon="['fas', 'angle-down']" class="fa-2xs" /></a>
+                            <ul class="dropdown">
+                                <li>
+                                    <a href="#">Shop Left Sidebar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Shop Right Sidebar</a>
+                                </li>
+                                <li>
+                                    <a href="#">Cart</a>
+                                </li>
+                                <li>
+                                    <a href="#">Wishlist</a>
+                                </li>
+                                <li>
+                                    <a href="#">Single Product</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="li-bord">
+                            <!--! ICON -->
+                            <span class="me-3">
+                                <font-awesome-icon :icon="['far', 'circle-user']" class="li-link fs-5 me-3" />
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--* SEARCHBAR -->
+                <div class="input-group" id="search">
+
+                    <!--! INPUT -->
+                    <input type="text" class="form-control" placeholder="Search...">
+
+                    <!--* ICON -->
+                    <span class="input-group-text" role="button">
+                        <font-awesome-icon :icon="['fas', 'magnifying-glass']" class="fw-bold" />
+                    </span>
+                </div>
             </div>
 
-            <!--* SEARCHBAR -->
-            <div class="input-group" id="search">
-
-                <!--! INPUT -->
-                <input type="text" class="form-control" placeholder="Search...">
-
-                <!--* ICON -->
-                <span class="input-group-text">
-                    <font-awesome-icon :icon="['fas', 'magnifying-glass']" />
-                </span>
-            </div>
 
 
         </div>
@@ -247,6 +262,26 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+input {
+    background-color: #F5F5F5;
+    border: 0;
+    padding: 10px 20px;
+
+}
+
+.input-group-text {
+    background-color: #F5F5F5;
+    border: 0;
+    color: #20AD96;
+    padding: 0 20px;
+}
+
+.input-group-text:hover {
+    color: #fff;
+    background-color: #20AD96;
+
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -257,7 +292,7 @@ ul {
 #nav-logo {
     width: 158px;
     display: block;
-    margin-right: 100px;
+
 
 }
 
@@ -275,9 +310,16 @@ ul {
     width: 1200px;
 }
 
-.links-ul {
-    gap: 50px;
 
+
+.li-bord {
+    cursor: pointer;
+
+}
+
+.li-bord:hover .li-link {
+    color: #20AD96;
+    text-decoration: underline;
 }
 
 nav {
@@ -305,6 +347,7 @@ a {
     padding: 30px;
     position: absolute;
     top: 100%;
+    border-bottom: 3px solid #20AD96;
 
     flex-direction: column;
     gap: 15px;
