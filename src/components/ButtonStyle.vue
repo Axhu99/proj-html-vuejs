@@ -40,6 +40,7 @@ export default {
     color: white;
     font-weight: bold;
     gap: 10px;
+    transition: all 0.3s;
 }
 
 .iconP {
@@ -47,6 +48,7 @@ export default {
 }
 
 .btn:hover {
-    background-color: #696969;
+    background-color: #3F3A64;
+    color: white;
 }
 </style>

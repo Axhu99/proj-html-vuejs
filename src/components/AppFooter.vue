@@ -6,22 +6,24 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex justify-content-center text-center my-5">
-        <div id="newsLetters">
-            <div class="titleNewsletters">
-                <h2>Subscribe <span class="c-secondary">Newsletters</span></h2>
-            </div>
-            <p>Enter you email address to register to our newletter subscription delivered on a regular basis!</p>
+    <section id="footer-top">
+        <div class="container d-flex justify-content-center text-center">
+            <div id="newsLetters">
+                <div class="titleNewsletters">
+                    <h2>Subscribe <span class="c-secondary">Newsletters</span></h2>
+                </div>
+                <p>Enter you email address to register to our newletter subscription delivered on a regular basis!</p>
 
-            <div class="input-group">
-                <input type="email" class="form-control" placeholder="Enter your email">
-                <button class="btn" type="button">Subscribe</button>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button class="btn" type="button">Subscribe</button>
+                </div>
             </div>
         </div>
-    </div>
-    <section class="bgc-grey">
-        <div class="container ">
-            <div class="row py-5">
+    </section>
+    <section id="footer-bottom" class="bgc-grey">
+        <div class="container">
+            <div class="row">
                 <div id="address" class="col-6">
                     <h3>Address</h3>
                     <p> 382 NE 191st # 87394 Miami, FL 33179-3899</p>
@@ -29,35 +31,41 @@ export default {
                     <p>support@maxcoach.com</p>
                     <div class="social-box">
                         <ul class="d-flex gap-4">
-                            <li>fa</li>
-                            <li>fa</li>
-                            <li>fa</li>
-                            <li>fa</li>
+                            <li><font-awesome-icon :icon="['fab', 'square-facebook']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'twitter']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'instagram']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'linkedin']" class="clr-icon" /></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- TODO fare un components che come promp ha il numero di colonne -->
                 <div id="info-box" class="col-6 d-flex">
-                    <div>
-                        <h3>Explore</h3>
-                        <ul class="row row-cols-2">
-                            <li class="col"><a href="#">Start here</a></li>
-                            <li class="col"><a href="#">Blog</a></li>
-                            <li class="col"><a href="#">About Us</a></li>
-                            <li class="col"><a href="#">Success story</a></li>
-                            <li class="col"><a href="#">Courses</a></li>
-                            <li class="col"><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Information</h3>
-                        <ul class="row row-cols-1">
-                            <li class="col"><a href="#">Membership</a></li>
-                            <li class="col"><a href="#">Purchase guide</a></li>
-                            <li class="col"><a href="#">Privacy policy</a></li>
-                            <li class="col"><a href="#">Terms of services</a></li>
-                        </ul>
+                    <div class="row w-100">
+                        <div class="col-3">
+                            <h3>Explore</h3>
+                            <ul>
+                                <li><a href="#">Start here</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <ul class="mt-4">
+                                <li><a href="#">Success story</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h3>Information</h3>
+                            <ul>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Purchase guide</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms of services</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,6 +85,13 @@ export default {
     padding: 100px 0
 }
  */
+#footer-top {
+    padding: 100px 0;
+}
+
+#footer-bottom {
+    padding: 80px;
+}
 
 .btn {
     background-color: #20AD96;
@@ -92,11 +107,25 @@ export default {
 ul {
     margin: 0;
     padding: 0;
+    line-height: 2.2rem;
 }
 
 li {
     list-style-type: none;
     padding: 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.clr-icon {
+    color: #B1B1B1;
+    font-size: 1.5rem;
+}
+
+.clr-icon:hover {
+    color: #20AD96;
 }
 
 .bgc-grey {
