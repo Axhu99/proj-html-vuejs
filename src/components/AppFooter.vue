@@ -31,18 +31,18 @@ export default {
                     <p>support@maxcoach.com</p>
                     <div class="social-box">
                         <ul class="d-flex gap-4">
-                            <li><font-awesome-icon :icon="['fab', 'square-facebook']" /></li>
-                            <li><font-awesome-icon :icon="['fab', 'twitter']" /></li>
-                            <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
-                            <li><font-awesome-icon :icon="['fab', 'linkedin']" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'square-facebook']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'twitter']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'instagram']" class="clr-icon" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'linkedin']" class="clr-icon" /></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- TODO fare un components che come promp ha il numero di colonne -->
                 <div id="info-box" class="col-6 d-flex">
-                    <div class="row justify-content-between">
-                        <div class="col-4">
+                    <div class="row w-100">
+                        <div class="col-3">
                             <h3>Explore</h3>
                             <ul>
                                 <li><a href="#">Start here</a></li>
@@ -50,14 +50,14 @@ export default {
                                 <li><a href="#">About Us</a></li>
                             </ul>
                         </div>
-                        <div class="col-4">
-                            <ul class="mt-5">
+                        <div class="col-3">
+                            <ul class="mt-4">
                                 <li><a href="#">Success story</a></li>
                                 <li><a href="#">Courses</a></li>
                                 <li><a href="#">Contact us</a></li>
                             </ul>
                         </div>
-                        <div class="col-4">
+                        <div class="col-3">
                             <h3>Information</h3>
                             <ul>
                                 <li><a href="#">Membership</a></li>
@@ -86,7 +86,7 @@ export default {
 }
  */
 #footer-top {
-    padding: 100px, 0;
+    padding: 100px 0;
 }
 
 #footer-bottom {
@@ -115,7 +115,18 @@ li {
     padding: 0;
 }
 
+h3 {
+    font-size: 18px;
+}
 
+.clr-icon {
+    color: #B1B1B1;
+    font-size: 1.5rem;
+}
+
+.clr-icon:hover {
+    color: #20AD96;
+}
 
 .bgc-grey {
     background-color: #F8F8F8;
