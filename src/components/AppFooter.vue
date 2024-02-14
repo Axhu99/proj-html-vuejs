@@ -6,22 +6,24 @@ export default {
 </script>
 
 <template>
-    <div class="container d-flex justify-content-center text-center my-5">
-        <div id="newsLetters">
-            <div class="titleNewsletters">
-                <h2>Subscribe <span class="c-secondary">Newsletters</span></h2>
-            </div>
-            <p>Enter you email address to register to our newletter subscription delivered on a regular basis!</p>
+    <section id="footer-top">
+        <div class="container d-flex justify-content-center text-center">
+            <div id="newsLetters">
+                <div class="titleNewsletters">
+                    <h2>Subscribe <span class="c-secondary">Newsletters</span></h2>
+                </div>
+                <p>Enter you email address to register to our newletter subscription delivered on a regular basis!</p>
 
-            <div class="input-group">
-                <input type="email" class="form-control" placeholder="Enter your email">
-                <button class="btn" type="button">Subscribe</button>
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Enter your email">
+                    <button class="btn" type="button">Subscribe</button>
+                </div>
             </div>
         </div>
-    </div>
-    <section class="bgc-grey">
-        <div class="container ">
-            <div class="row py-5">
+    </section>
+    <section id="footer-bottom" class="bgc-grey">
+        <div class="container">
+            <div class="row">
                 <div id="address" class="col-6">
                     <h3>Address</h3>
                     <p> 382 NE 191st # 87394 Miami, FL 33179-3899</p>
@@ -77,6 +79,13 @@ export default {
     padding: 100px 0
 }
  */
+#footer-top {
+    padding: 100px;
+}
+
+#footer-bottom {
+    padding: 80px;
+}
 
 .btn {
     background-color: #20AD96;
