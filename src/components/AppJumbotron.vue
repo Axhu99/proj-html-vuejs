@@ -2,7 +2,10 @@
 import ButtonStyle from './ButtonStyle.vue'
 export default {
     name: 'AppJumbotron',
-    components: { ButtonStyle }
+    components: { ButtonStyle },
+    data: () => ({
+        partners: ["client-logo-01.png", "client-logo-02.png", "client-logo-03.png", "client-logo-04.png", "client-logo-05.png", "client-logo-06.png",]
+    })
 }
 </script>
 
@@ -14,20 +17,36 @@ export default {
             <div class="col-6 d-flex align-itens-center">
                 <div class="jumbotronText">
                     <h1 class="titleJT">Distant learning for further expansion</h1>
-                    <p>Learning is a life-long jourbey that in fact we never find</p>
+                    <p class="mt-2  mb-5">Learning is a life-long journey that in fact we never find the terminate stop.
+                        Stop
+                        searching, enjoy
+                        the process.</p>
                     <ButtonStyle :icon="['fas', 'download']" buttonText="Download free guide" />
-                    <p>Have questions? <span class="link">Get Free Sample</span></p>
+                    <p class="mt-3">Have questions? <span class="link clr-grn fw-bold">Get Free Sample <font-awesome-icon
+                                :icon="['fas', 'arrow-right']" /></span></p>
                 </div>
             </div>
             <div class="col-6">
                 <img src="/img/about-me-profile-ohm4dxoearqbxny7q3bq1pzbdgofdx0tobbeqcvzd0.jpg" alt=""
                     class="rounded-circle">
             </div>
+            <div class="col-10 offset-1 mt-5">
+                <ul class="d-flex justify-content-between align-items-center list-unstyled">
+                    <li v-for="partner in  partners " :key="i">
+                        <img :src="`/img/${partner}`" :alt="`${partner}`">
+                    </li>
+                </ul>
+            </div>
         </div>
+
     </div>
 </template>
 
 <style>
+.clr-grn {
+    color: #20AD96;
+}
+
 .jumbotronText {
     display: flex;
     flex-direction: column;
@@ -37,5 +56,13 @@ export default {
 .titleJT {
     color: #3F3A64;
     font-weight: bold;
+}
+
+li {
+    filter: grayscale(0.5);
+}
+
+li:hover {
+    filter: none;
 }
 </style>
