@@ -9,23 +9,24 @@ export default {
   <section id="hero-section">
     <div class="container p-5">
       <div class="row">
-        <div class="col-7 p-0 position-relative">
+        <div class="col-7 offset-1 p-0 position-relative">
           <img src="/img/home-2-popup-video-poster.jpg" alt="" class="img-fluid" />
           <img src="/img/icon-youtube-play.png" alt="" class="youtube-icon" />
         </div>
-        <div class="col-5 d-flex flex-column justify-content-center gap-4">
-          <h3 class="clr-gry">
+        <div class="col-3 d-flex flex-column justify-content-center gap-4">
+          <h6 class="clr-gry">
             GET STARTED <span class="clr-vlt">EFFORTLESSLY</span>
-          </h3>
-          <h2 class="clr-vlt">
-            Enjoy Our <span class="clr-grn">Companionship</span>
+          </h6>
+          <h2 class="clr-vlt fs-1">
+            Enjoy Our <br> <span class="clr-grn">Companionship</span>
           </h2>
           <p class="clr-gry">
             Sneek peek into what has in store for you on our online teaching
             and mentoring portal. Seek for some hidden hints of early-bird
             rewards as well.
           </p>
-          <a href="#" class="text-decoration-none clr-grn">Download free guidebook</a>
+          <a href="#" class="text-decoration-none clr-grn fw-bold">Download free guidebook <font-awesome-icon
+              :icon="['fas', 'arrow-right']" /></a>
         </div>
       </div>
     </div>

@@ -31,35 +31,41 @@ export default {
                     <p>support@maxcoach.com</p>
                     <div class="social-box">
                         <ul class="d-flex gap-4">
-                            <li>fa</li>
-                            <li>fa</li>
-                            <li>fa</li>
-                            <li>fa</li>
+                            <li><font-awesome-icon :icon="['fab', 'square-facebook']" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'twitter']" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
+                            <li><font-awesome-icon :icon="['fab', 'linkedin']" /></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- TODO fare un components che come promp ha il numero di colonne -->
                 <div id="info-box" class="col-6 d-flex">
-                    <div>
-                        <h3>Explore</h3>
-                        <ul class="row row-cols-2">
-                            <li class="col"><a href="#">Start here</a></li>
-                            <li class="col"><a href="#">Blog</a></li>
-                            <li class="col"><a href="#">About Us</a></li>
-                            <li class="col"><a href="#">Success story</a></li>
-                            <li class="col"><a href="#">Courses</a></li>
-                            <li class="col"><a href="#">Contact us</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Information</h3>
-                        <ul class="row row-cols-1">
-                            <li class="col"><a href="#">Membership</a></li>
-                            <li class="col"><a href="#">Purchase guide</a></li>
-                            <li class="col"><a href="#">Privacy policy</a></li>
-                            <li class="col"><a href="#">Terms of services</a></li>
-                        </ul>
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <h3>Explore</h3>
+                            <ul>
+                                <li><a href="#">Start here</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="mt-5">
+                                <li><a href="#">Success story</a></li>
+                                <li><a href="#">Courses</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <h3>Information</h3>
+                            <ul>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="#">Purchase guide</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms of services</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,7 +86,7 @@ export default {
 }
  */
 #footer-top {
-    padding: 100px;
+    padding: 100px, 0;
 }
 
 #footer-bottom {
@@ -101,12 +107,15 @@ export default {
 ul {
     margin: 0;
     padding: 0;
+    line-height: 2.2rem;
 }
 
 li {
     list-style-type: none;
     padding: 0;
 }
+
+
 
 .bgc-grey {
     background-color: #F8F8F8;

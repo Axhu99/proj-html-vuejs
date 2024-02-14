@@ -61,7 +61,7 @@ export default {
 <template>
   <section id="courses-section">
     <div class="container text-center">
-      <h5 class="">STIMULATEED TO LEARN?</h5>
+      <h6 class="clr-gry">STIMULATEED TO LEARN?</h6>
       <h2 class="clr-vlt mb-5">Featured Online Courses</h2>
       <div class="row g-4">
         <div class="col-6" v-for="course in courses" :key="course.id">
@@ -127,6 +127,17 @@ img {
 
 .clr-vlt {
   color: #3F3A64;
+}
+
+.clr-gry {
+  color: #8C89A2;
+}
+
+
+
+p {
+  font-size: 14px;
+  color: #8C89A2;
 }
 
 span {
