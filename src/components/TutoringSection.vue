@@ -41,7 +41,8 @@ export default {
           <img :src="`../../public/img/${tutoring.imgpath}`" alt="" />
           <h3 class="clr-vlt mt-3">{{ tutoring.title }}</h3>
           <p class="mt-3">{{ tutoring.text }}</p>
-          <a :href="tutoring.link" class="link-hover text-decoration-none clr-gry">{{ tutoring.link }}</a>
+          <a :href="tutoring.link" class="link-hover text-decoration-none clr-gry">{{ tutoring.link }} <font-awesome-icon
+              :icon="['fas', 'arrow-right']" /></a>
         </div>
       </div>
     </div>
