@@ -1,8 +1,10 @@
 <script>
 import { Transition, transformVNodeArgs } from 'vue';
+import CertificationSection from './CertificationSection.vue';
 
 export default {
     name: 'CarouselSection',
+    components: { CertificationSection },
     data: () => ({
         learners: [
             {
@@ -64,38 +66,44 @@ export default {
 </script>
 
 <template>
-    <div class="text-center mt-5 mb-5">
-        <p>GREAT WORDS ABOUT MAXCOACH</p>
-        <h3>Our <span>top Learners'</span>verbatim</h3>
-        <div class="mt-5 card-container">
-            <div class="carousel d-flex">
-                <div class="card" v-for="(learner, i) in learners" :key="learner.id" :class="{
-                    'card': true,
-                    'active': i === activeIndex,
-                }">
-
-
-                    <h4> {{ learner.title }}
-                    </h4>
-                    <p class="mt-4">{{ learner.paragraph }}</p>
-                    <div class="d-flex">
-                        <img :src="`../../public/img/${learner.img}`" alt="" class="rounded-circle mt-4">
-                        <div class="mt-4">
-                            <p>{{ learner.name }}</p>
-                            <span>/ {{ learner.job }}</span>
+    <section id="carousel-section">
+        <div class="text-center mb-5">
+            <p class="clr-gry fw-bold">GREAT WORDS ABOUT MAXCOACH</p>
+            <h3 class="clr-vlt">Our <span>top Learners'</span>verbatim</h3>
+            <div class="mt-5 card-container">
+                <div class="carousel d-flex">
+                    <div class="card" v-for="(learner, i) in learners" :key="learner.id" :class="{
+                        'card': true,
+                        'active': i === activeIndex,
+                    }">
+                        <h4> {{ learner.title }}
+                        </h4>
+                        <p class="mt-4">{{ learner.paragraph }}</p>
+                        <div class="d-flex">
+                            <img :src="`../../public/img/${learner.img}`" alt="" class="rounded-circle mt-4">
+                            <div class="mt-4">
+                                <p>{{ learner.name }}</p>
+                                <span>/ {{ learner.job }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="dots">
+                <span v-for="(learner, index) in learners" :key="learner.id" @click="goToSlide(index), goToNext"
+                    :class="{ 'dot': true, 'active': index === dotActiveIndex }"></span>
+            </div>
         </div>
-        <div class="dots">
-            <span v-for="(learner, index) in learners" :key="learner.id" @click="goToSlide(index), goToNext"
-                :class="{ 'dot': true, 'active': index === dotActiveIndex }"></span>
-        </div>
-    </div>
+        <CertificationSection />
+    </section>
 </template>
 
 <style scoped>
+#carousel-section {
+    background-color: #F8F8F8;
+    padding: 100px 0;
+}
+
 .card {
     padding: 41px 50px 36px;
     opacity: 0.5;
@@ -106,8 +114,16 @@ export default {
     opacity: 1;
 }
 
+.clr-gry {
+    color: #8C89A2;
+}
+
+.clr-vlt {
+    color: #3f3a64;
+}
+
 span {
-    color: green;
+    color: #20AD96;
 }
 
 img {
