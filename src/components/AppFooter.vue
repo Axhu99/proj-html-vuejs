@@ -93,11 +93,12 @@ export default {
     padding: 80px;
 }
 
-.btn {
+.input-group .btn {
     background-color: #20AD96;
     padding: 15px 30px;
     color: white;
     font-weight: bold;
+    z-index: 0;
 }
 
 .form-control {
