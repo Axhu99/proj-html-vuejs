@@ -35,7 +35,7 @@ export default {
   <section id="tutoring-section">
     <div class="container text-center mt-3">
       <p class="clr-gry">MAXCOACH AVAILABLE</p>
-      <h2 class="clr-vlt">Accesso al programma <span class="clr-grn">Smart Tutoring</span> per i tuoi vantaggi.</h2>
+      <h2 class="clr-vlt">Access <span class="clr-grn">Smart Tutoring</span> Program For Benefits.</h2>
       <div class="row d-flex justify-content-center p-5">
         <div v-for="tutoring in tutorings" :key="tutoring.id" class="col-3 text-start">
           <img :src="`../../public/img/${tutoring.imgpath}`" alt="" />

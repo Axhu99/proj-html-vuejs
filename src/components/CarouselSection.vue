@@ -36,9 +36,9 @@ export default {
                 img: "testimonial-avata-01.jpg",
             },
         ],
-        activeIndex: 0,
-        prevIndex: null,
-        nextIndex: 1,
+        activeIndex: 2,
+        prevIndex: 1,
+        nextIndex: 3,
     }),
     methods: {
         goToSlide(index) {
