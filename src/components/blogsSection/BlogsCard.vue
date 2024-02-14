@@ -27,12 +27,12 @@ export default {
                 </div>
                 <div class="footer-card">
                     <span class=" me-5">
-                        <font-awesome-icon :icon="['far', 'file-lines']" class="me-2" />
+                        <font-awesome-icon :icon="['far', 'calendar']" class="me-2" />
                         {{ card.date }}
                     </span>
                     <span>
-                        <font-awesome-icon :icon="['far', 'user']" class="me-2" />
-                        {{ card.views }}views
+                        <font-awesome-icon :icon="['fas', 'eye']" class="me-2" />
+                        {{ card.views }} views
                     </span>
                 </div>
             </div>
