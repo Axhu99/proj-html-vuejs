@@ -103,6 +103,10 @@ export default {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
+h4:hover {
+  color: #20ad96;
+}
+
 .img-card {
   flex-basis: 30%;
 }
