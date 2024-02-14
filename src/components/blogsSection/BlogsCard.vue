@@ -18,7 +18,7 @@ export default {
 <template>
     <div class="col-4 px-4">
         <div class="card">
-            <img src='../../../public/img/home-personal-finance-blog-03-480x352.jpg' class="card-img-top" alt='...'>
+            <img :src="`../../public/img/${card.imgpath}`" class="card-img-top" alt='...'>
             <div class="card-body">
                 <div class="d-flex justify-content-center flex-column">
                     <h6>{{ card.subtitle }}</h6>

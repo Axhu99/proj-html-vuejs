@@ -14,7 +14,7 @@ export default {
                 title: "Ten Benefits Of Rentals That May Change Your Perspective",
                 subtitle: 'BUSINESS',
                 value: 1790,
-                img: 'public/img/home-personal-finance-blog-02-480x352.jpg',
+                imgpath: 'home-personal-finance-blog-03-480x352.jpg',
                 date: 'Dec 28, 2020',
                 views: '3,060'
             },
@@ -23,7 +23,7 @@ export default {
                 title: "10 Things Successful Mompreneurs Do Different",
                 subtitle: 'BUSINESS',
                 value: 1790,
-                img: 'public/img/home-personal-finance-blog-03-480x352.jpg',
+                imgpath: 'home-personal-finance-blog-02-480x352.jpg',
                 date: 'Dec 28, 2020',
                 views: '2,684'
             }
