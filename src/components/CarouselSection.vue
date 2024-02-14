@@ -1,4 +1,6 @@
 <script>
+import { Transition, transformVNodeArgs } from 'vue';
+
 export default {
     name: 'CarouselSection',
     data: () => ({
@@ -36,25 +38,25 @@ export default {
                 img: "testimonial-avata-01.jpg",
             },
         ],
-        activeIndex: 2,
-        prevIndex: 1,
-        nextIndex: 3,
+        dotActiveIndex: 0,
+        activeIndex: 1,
+        prevIndex: null,
+        nextIndex: 1,
+
     }),
     methods: {
-        goToSlide(index) {
-            let nextIndex = (this.activeIndex + 1) % this.learners.length;
-
-            if (index === this.activeIndex) return;
-
-            if (index === this.learners.length - 1) {
-                this.prevIndex = this.activeIndex;
-                this.activeIndex = 0;
-                this.nextIndex = 1;
-            } else {
-                this.prevIndex = this.activeIndex;
-                this.activeIndex = nextIndex;
-                this.nextIndex = (nextIndex + 1) % this.learners.length;
+        goToSlide(i) {
+            if (i === this.learners.length - 1) {
+                this.activeIndex = 0
+                this.dotActiveIndex = i;
             }
+            else {
+                this.dotActiveIndex = i;
+                this.activeIndex = i + 1;
+            }
+        },
+        goToNext() {
+            card.style.transform = 'translate(-33,33%)'
         }
     }
 
@@ -67,10 +69,12 @@ export default {
         <h3>Our <span>top Learners'</span>verbatim</h3>
         <div class="mt-5 card-container">
             <div class="carousel d-flex">
-                <div class="card" v-for="(learner, index) in learners" :key="learner.id" :class="{
-                    'card': true, 'active': index === activeIndex, 'prev': index === prevIndex, 'next': index === nextIndex,
-                    'd-none': index === 0 && activeIndex === 2
+                <div class="card" v-for="(learner, i) in learners" :key="learner.id" :class="{
+                    'card': true,
+                    'active': i === activeIndex,
                 }">
+
+
                     <h4> {{ learner.title }}
                     </h4>
                     <p class="mt-4">{{ learner.paragraph }}</p>
@@ -85,17 +89,21 @@ export default {
             </div>
         </div>
         <div class="dots">
-            <span v-for="(learner, index) in learners" :key="learner.id" @click="goToSlide(index)"
-                :class="{ 'dot': true, 'active': index === activeIndex }"></span>
+            <span v-for="(learner, index) in learners" :key="learner.id" @click="goToSlide(index), goToNext"
+                :class="{ 'dot': true, 'active': index === dotActiveIndex }"></span>
         </div>
     </div>
 </template>
 
 <style scoped>
 .card {
-    flex: 0 0 33.33%;
     padding: 41px 50px 36px;
-    transition: opacity 0.5s ease;
+    opacity: 0.5;
+    flex: 0 0 33.33%;
+}
+
+.active {
+    opacity: 1;
 }
 
 span {
@@ -108,23 +116,9 @@ img {
 }
 
 .carousel {
-    gap: 15px;
     overflow: hidden;
-    position: relative;
-    width: 100%;
+    gap: 15px;
 }
-
-.card.active {
-    opacity: 1;
-    position: relative;
-    left: 0;
-}
-
-.card.prev,
-.card.next {
-    opacity: 0.5;
-}
-
 
 .dots {
     display: flex;
