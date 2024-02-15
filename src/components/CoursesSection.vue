@@ -82,7 +82,7 @@ export default {
       </div>
       <!-- !Riguardare la posizione dell'icona  -->
       <div class="d-flex justify-content-center mt-5">
-        <ButtonStyle buttonText='View all courses' :icon="['fas', 'arrow-right']" iconRight="true" />
+        <ButtonStyle buttonText='View all courses' :icon="['fas', 'arrow-right']" iconRight />
       </div>
     </div>
   </section>

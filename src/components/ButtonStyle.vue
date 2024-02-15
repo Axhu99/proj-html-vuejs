@@ -6,6 +6,7 @@ export default {
     components: {
         FontAwesomeIcon
     },
+
     props: {
         buttonText: {
             type: String,
@@ -13,7 +14,8 @@ export default {
         },
         icon: {
             type: Array,
-            required: true,
+            // required: false,
+            // default: ""
         },
         iconRight: {
             type: Boolean,
@@ -27,7 +29,7 @@ export default {
 <template>
     <div>
         <button type="button" class="btn d-flex justify-content-center"> <span
-                :class="{ 'iconP': iconRight }"><font-awesome-icon :icon="icon" /></span>
+                :class="{ 'iconP': iconRight }"><font-awesome-icon v-if="(icon)" :icon="icon" /></span>
             {{ buttonText }}</button>
     </div>
 </template>
