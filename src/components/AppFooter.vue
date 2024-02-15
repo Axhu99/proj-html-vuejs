@@ -69,8 +69,8 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="copyright d-flex justify-content-center py-3">
-                <p>2020 Maxcoach. All Rights Reserved</p>
+            <div class="copyright d-flex justify-content-center my-3">
+                <p>©2020 Maxcoach. All Rights Reserved</p>
             </div>
         </div>
     </section>
@@ -114,6 +114,11 @@ ul {
 li {
     list-style-type: none;
     padding: 0;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
 }
 
 h3 {
