@@ -51,10 +51,6 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/style/variables' as *;
 
-.clr-grn {
-    color: $green;
-}
-
 .jumbotronText {
     display: flex;
     flex-direction: column;

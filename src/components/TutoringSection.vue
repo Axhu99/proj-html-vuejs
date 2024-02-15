@@ -57,16 +57,4 @@ export default {
 }
 
 /* ------------------------------------ */
-
-.clr-vlt {
-  color: #3F3A64;
-}
-
-.clr-gry {
-  color: #696969;
-}
-
-.clr-grn {
-  color: #20AD96;
-}
 </style>

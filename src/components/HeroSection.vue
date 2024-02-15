@@ -40,17 +40,6 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/style/variables' as *;
 
-.clr-vlt {
-  color: $violet;
-}
-
-.clr-gry {
-  color: $grey;
-}
-
-.clr-grn {
-  color: $green;
-}
 
 .youtube-icon {
   position: absolute;

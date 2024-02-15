@@ -1,5 +1,5 @@
 <script>
-import CertificationSection from './CertificationSection.vue';
+import CertificationSection from "./CertificationSection.vue";
 export default {
     name: 'CarouselSection',
     components: { CertificationSection },
@@ -107,14 +107,6 @@ export default {
 
 .active {
     opacity: 1;
-}
-
-.clr-gry {
-    color: #8C89A2;
-}
-
-.clr-vlt {
-    color: #3f3a64;
 }
 
 span {
