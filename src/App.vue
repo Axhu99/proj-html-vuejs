@@ -33,7 +33,7 @@ export default {
     color: $lgtviolet;
 }
 
-.clr-grey {
+.clr-gry {
     color: $grey;
 }
 </style>
