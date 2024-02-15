@@ -1,5 +1,4 @@
 <script>
-import { Transition, transformVNodeArgs } from 'vue';
 import CertificationSection from './CertificationSection.vue';
 
 export default {
@@ -57,9 +56,6 @@ export default {
                 this.activeIndex = i + 1;
             }
         },
-        goToNext() {
-            card.style.transform = 'translate(-33,33%)'
-        }
     }
 
 };
