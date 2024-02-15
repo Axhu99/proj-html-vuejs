@@ -81,4 +81,9 @@ p {
 span {
   color: grey;
 }
+
+h4,
+img {
+  cursor: pointer;
+}
 </style>
