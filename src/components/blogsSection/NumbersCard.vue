@@ -22,7 +22,7 @@ export default {
     height: 400px;
     flex-basis: 25%;
     text-align: center;
-    padding: 40px;
+    padding: 25px;
     border-left: 1px solid rgba(211, 211, 211, 0.438);
 
     display: flex;
