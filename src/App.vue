@@ -19,5 +19,21 @@ export default {
 </template>
 
 <style lang="scss">
-@use "./assets/style/style.scss" as *;
+@use "./assets/style/variables" as *;
+
+.clr-vlt {
+    color: $violet;
+}
+
+.clr-grn {
+    color: $green;
+}
+
+.clr-lgvlt {
+    color: $lgtviolet;
+}
+
+.clr-grey {
+    color: $grey;
+}
 </style>

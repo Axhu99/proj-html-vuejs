@@ -1,5 +1,5 @@
 <script>
-import CertificationSection from './CertificationSection.vue';
+import CertificationSection from "./CertificationSection.vue";
 export default {
     name: 'CarouselSection',
     components: { CertificationSection },
