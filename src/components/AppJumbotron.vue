@@ -48,9 +48,11 @@ export default {
     </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../assets/style/variables' as *;
+
 .clr-grn {
-    color: #20AD96;
+    color: $green;
 }
 
 .jumbotronText {
@@ -60,7 +62,7 @@ export default {
 }
 
 .titleJT {
-    color: #3F3A64;
+    color: $violet;
     font-weight: bold;
 }
 
