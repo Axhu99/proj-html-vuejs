@@ -7,11 +7,14 @@ export default {
 
 <template>
   <section id="hero-section">
-    <div class="container p-5">
+    <div class="container p-5 mb-5">
       <div class="row">
         <div class="col-7 offset-1 p-0 position-relative">
-          <img src="/img/home-2-popup-video-poster.jpg" alt="" class="img-fluid" />
-          <img src="/img/icon-youtube-play.png" alt="" class="youtube-icon" />
+          <img src="/img/home-2-popup-video-poster.jpg" alt="video" class="img-fluid" />
+          <img src="/img/icon-youtube-play.png" alt="youtube-icon" class="youtube-icon" />
+          <img src="/img/maxcoach-shape-05.png" alt="effect" class="effect-shape-round">
+          <img src="/img/maxcoach-shape-07.png" alt="effect" class="effect-shape">
+          <img src="/img/maxcoach-shape-02.png" alt="effect" class="effect-round">
         </div>
         <div class="col-3 d-flex flex-column justify-content-center gap-4">
           <h6 class="clr-gry">
@@ -52,5 +55,30 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.effect-shape {
+  position: absolute;
+  bottom: -15%;
+  right: -12%;
+  z-index: -1;
+}
+
+.effect-shape-round {
+  position: absolute;
+  top: 15%;
+  left: -15%;
+  z-index: -1;
+}
+
+.effect-round {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+}
+
+.col-7:hover [class*="effect"] {
+  transform: scale(1.2);
 }
 </style>

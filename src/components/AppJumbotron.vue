@@ -105,4 +105,8 @@ li:hover {
     top: 15%;
     right: -10%;
 }
+
+.col-6:hover [class*="effect"] {
+    transform: scale(1.2);
+}
 </style>
