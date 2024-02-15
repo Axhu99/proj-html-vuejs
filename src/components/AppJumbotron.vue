@@ -1,11 +1,10 @@
 <script>
 import ButtonStyle from './ButtonStyle.vue'
+import { store } from '../data/store';
 export default {
     name: 'AppJumbotron',
     components: { ButtonStyle },
-    data: () => ({
-        partners: ["client-logo-01.png", "client-logo-02.png", "client-logo-03.png", "client-logo-04.png", "client-logo-05.png", "client-logo-06.png",]
-    })
+    data: () => ({ store })
 }
 </script>
 
@@ -38,7 +37,7 @@ export default {
             </div>
             <div class="col-10 offset-1 mt-5">
                 <ul class="d-flex justify-content-between align-items-center list-unstyled">
-                    <li v-for="(partner, i) in  partners " :key="i">
+                    <li v-for="(partner, i) in  store.partners " :key="i">
                         <img :src="`/img/${partner}`" :alt="`${partner}`">
                     </li>
                 </ul>

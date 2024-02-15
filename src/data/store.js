@@ -123,4 +123,12 @@ export const store = reactive({
       subtitle: "BLOG POSTS",
     },
   ],
+  partners: [
+    "client-logo-01.png",
+    "client-logo-02.png",
+    "client-logo-03.png",
+    "client-logo-04.png",
+    "client-logo-05.png",
+    "client-logo-06.png",
+  ],
 });
