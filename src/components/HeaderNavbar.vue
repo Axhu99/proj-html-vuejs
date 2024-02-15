@@ -262,6 +262,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/style/variables' as *;
+
 input {
     background-color: #F5F5F5;
     border: 0;
@@ -278,7 +280,7 @@ input {
 
 .input-group-text:hover {
     color: #fff;
-    background-color: #20AD96;
+    background-color: $green ;
 
 }
 
@@ -323,7 +325,7 @@ ul {
 }
 
 .li-bord:hover .li-link {
-    color: #20AD96;
+    color: $green;
     text-decoration: underline;
 }
 
@@ -348,11 +350,11 @@ a {
 .dropdown,
 .dropdown-s {
 
-    background-color: #fff;
+    background-color: $white;
     padding: 30px;
     position: absolute;
     top: 100%;
-    border-bottom: 3px solid #20AD96;
+    border-bottom: 3px solid $green;
 
 
     flex-direction: column;
