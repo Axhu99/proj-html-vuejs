@@ -60,6 +60,15 @@ export default {
 
 li {
     filter: opacity(0.5);
+    cursor: pointer;
+}
+
+.link {
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 li:hover {
