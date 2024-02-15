@@ -1,35 +1,14 @@
 <script>
+import { store } from '../../data/store';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import BlogsCard from './BlogsCard.vue'
+import BlogsCard from './BlogsCard.vue';
 export default {
 
     name: 'BlogsMain',
     components: {
         FontAwesomeIcon, BlogsCard
     },
-    data: () => ({
-        cards: [
-            {
-                id: 1,
-                title: "Ten Benefits Of Rentals That May Change Your Perspective",
-                subtitle: 'BUSINESS',
-                value: 1790,
-                imgpath: 'home-personal-finance-blog-03-480x352.jpg',
-                date: 'Dec 28, 2020',
-                views: '3,060'
-            },
-            {
-                id: 2,
-                title: "10 Things Successful Mompreneurs Do Different",
-                subtitle: 'BUSINESS',
-                value: 1790,
-                imgpath: 'home-personal-finance-blog-02-480x352.jpg',
-                date: 'Dec 28, 2020',
-                views: '2,684'
-            }
-
-        ]
-    }),
+    data: () => ({ store })
 }
 
 </script>
@@ -74,7 +53,7 @@ export default {
                         </li>
                     </ul>
                 </div>
-                <BlogsCard v-for="card in cards" :key="card.id" :card="card" />
+                <BlogsCard v-for="card in store.cards" :key="card.id" :card="card" />
             </div>
         </div>
 

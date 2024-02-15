@@ -1,43 +1,17 @@
 <script>
+import { store } from '../../data/store';
 import NumbersCard from './NumbersCard.vue';
 export default {
     name: 'NumbersSection',
     components: { NumbersCard },
-    data: () => ({
-        blogs: [
-            {
-                id: 1,
-                title: "Successfully trained",
-                value: 1790,
-                subtitle: 'ENROLLED LEARNERS',
-            },
-            {
-                id: 2,
-                title: "Proudly Received",
-                value: 19,
-                subtitle: 'COUNTRYWIDE AWARDS',
-            },
-            {
-                id: 3,
-                title: "Firmly Established",
-                value: 24,
-                subtitle: 'LOCAL BRANCHES',
-            },
-            {
-                id: 4,
-                title: "Getting Featured on",
-                value: 1090,
-                subtitle: 'BLOG POSTS',
-            },
-        ]
-    }),
+    data: () => ({ store })
 }
 
 </script>
 
 <template>
     <div class="container cards-container">
-        <numbersCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
+        <numbersCard v-for="blog in store.blogs" :key="blog.id" :blog="blog" />
     </div>
 </template>
 
