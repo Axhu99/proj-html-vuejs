@@ -13,7 +13,7 @@ export default {
 <template>
     <div class="vh-100">
         <div class="container">
-            <div class="row py-5">
+            <div class="row pt-5">
                 <div class="col-5 d-flex align-itens-center">
                     <div class="jumbotronText">
                         <h1 class="titleJT">Distant learning for further expansion</h1>
