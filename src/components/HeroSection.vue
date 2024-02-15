@@ -44,7 +44,7 @@ export default {
 }
 
 .clr-grn {
-  color: #20ad96;
+  color: $green;
 }
 
 .youtube-icon {
