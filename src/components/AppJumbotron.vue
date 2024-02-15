@@ -109,4 +109,8 @@ li:hover {
 .col-6:hover [class*="effect"] {
     transform: scale(1.2);
 }
+
+[class*="effect"] {
+    transition: transform 0.3s ease-in-out;
+}
 </style>

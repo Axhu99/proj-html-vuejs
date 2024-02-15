@@ -83,4 +83,8 @@ export default {
 .col-7:hover [class*="effect"] {
   transform: scale(1.2);
 }
+
+[class*="effect"] {
+  transition: transform 0.3s ease-in-out;
+}
 </style>
