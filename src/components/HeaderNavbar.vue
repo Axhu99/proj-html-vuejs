@@ -374,10 +374,7 @@ a {
     padding-top: 10px;
 }
 
-.li-bord:hover .dropdown {
-    visibility: visible;
-}
-
+.li-bord:hover .dropdown,
 .li-bord-s:hover .dropdown-s {
     visibility: visible;
 }
