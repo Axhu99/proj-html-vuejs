@@ -147,6 +147,10 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #696969;
+}
+
+p {
+    color: #696969;
 }
 </style>
