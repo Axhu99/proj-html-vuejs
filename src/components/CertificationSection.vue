@@ -24,18 +24,6 @@ export default {
   background-color: #F8F8F8;
 }
 
-.clr-gry {
-  color: #8C89A2;
-}
-
-.clr-vlt {
-  color: #3f3a64;
-}
-
-.clr-grn {
-  color: #20AD96;
-}
-
 .effect {
   position: absolute;
   left: 5%;
