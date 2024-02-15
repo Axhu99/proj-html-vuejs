@@ -32,7 +32,7 @@ export default {
             </div>
             <div class="col-10 offset-1 mt-5">
                 <ul class="d-flex justify-content-between align-items-center list-unstyled">
-                    <li v-for="partner in  partners " :key="i">
+                    <li v-for="(partner, i) in  partners " :key="i">
                         <img :src="`/img/${partner}`" :alt="`${partner}`">
                     </li>
                 </ul>
@@ -59,7 +59,7 @@ export default {
 }
 
 li {
-    filter: grayscale(0.5);
+    filter: opacity(0.5);
 }
 
 li:hover {
