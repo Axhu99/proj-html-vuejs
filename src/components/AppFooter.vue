@@ -21,8 +21,8 @@ export default {
             </div>
         </div>
     </section>
-    <section id="footer-bottom" class="bgc-grey">
-        <div class="container">
+    <section class="bgc-grey">
+        <div class="container" id="footer-bottom">
             <div class="row">
                 <div id="address" class="col-6">
                     <h3>Address</h3>
@@ -69,9 +69,9 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="copyright d-flex justify-content-center my-3">
-                <p>©2020 Maxcoach. All Rights Reserved</p>
-            </div>
+        </div>
+        <div class="copyright d-flex justify-content-center py-4">
+            <p>©2020 Maxcoach. All Rights Reserved</p>
         </div>
     </section>
 </template>
@@ -90,7 +90,7 @@ export default {
 }
 
 #footer-bottom {
-    padding: 80px;
+    padding: 80px 0;
 }
 
 .input-group .btn {
@@ -134,6 +134,10 @@ h3 {
     color: #20AD96;
 }
 
+a:hover {
+    color: #20AD96;
+}
+
 .bgc-grey {
     background-color: #F8F8F8;
 }
@@ -148,6 +152,8 @@ h3 {
 
 .copyright {
     color: #ABABAB;
+    font-weight: 600;
+    opacity: 0.5;
 }
 
 a {
