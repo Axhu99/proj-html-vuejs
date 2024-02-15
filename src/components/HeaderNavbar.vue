@@ -274,7 +274,7 @@ input {
 .input-group-text {
     background-color: #F5F5F5;
     border: 0;
-    color: #20AD96;
+    color: $green;
     padding: 0 20px;
 }
 

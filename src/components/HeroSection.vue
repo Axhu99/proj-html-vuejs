@@ -37,17 +37,19 @@ export default {
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/style/variables' as *;
+
 .clr-vlt {
-  color: #3f3a64;
+  color: $violet;
 }
 
 .clr-gry {
-  color: #696969;
+  color: $grey;
 }
 
 .clr-grn {
-  color: #20ad96;
+  color: $green;
 }
 
 .youtube-icon {
