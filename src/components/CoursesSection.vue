@@ -40,21 +40,23 @@ export default {
 
 
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../assets/style/variables' as *;
+
 #courses-section {
   background-color: #f5f7fa;
   padding: 100px 0;
 }
 
 .col-6:hover {
-  background-color: white;
+  background-color: $white;
   transition: background-color 0.5s ease;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 
 h4:hover {
-  color: #20ad96;
+  color: $green;
 }
 
 .img-card {
@@ -72,22 +74,22 @@ img {
 }
 
 .clr-grn {
-  color: #20ad96;
+  color: $green;
 }
 
 .clr-vlt {
-  color: #3F3A64;
+  color: $violet;
 }
 
 .clr-gry {
-  color: #8C89A2;
+  color: $lgtviolet;
 }
 
 
 
 p {
   font-size: 14px;
-  color: #8C89A2;
+  color: $lgtviolet;
 }
 
 span {
