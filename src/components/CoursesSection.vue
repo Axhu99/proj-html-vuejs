@@ -73,20 +73,6 @@ img {
   object-fit: cover;
 }
 
-// .clr-grn {
-//   color: $green;
-// }
-
-// .clr-vlt {
-//   color: $violet;
-// }
-
-// .clr-lgvlt {
-//   color: $lgtviolet;
-// }
-
-
-
 p {
   font-size: 14px;
   color: $lgtviolet;

@@ -109,14 +109,6 @@ export default {
     opacity: 1;
 }
 
-.clr-gry {
-    color: #8C89A2;
-}
-
-.clr-vlt {
-    color: #3f3a64;
-}
-
 span {
     color: #20AD96;
 }
